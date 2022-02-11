@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  perspective: 580px;
+  transition: all .5s;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%,rgba(0,0,0,1) 15%, rgba(121,9,9,1) 100%);
+}
+body:hover{
+  perspective: 1500px;
+}
+.wrapper{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+.wrapper:hover{
+  transform: rotateZ(180deg) rotateX(180deg) rotateY(270deg);
+}
+.box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 5s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+.box:nth-child(1){
+    background-image: url('../images/thor.jpg');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center left;
+  transform: rotateY(90deg) translateX(-150px);
+}
+.box:nth-child(2){
+    background-image: url(../images/aquaman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center right;
+  transform: rotateY(-90deg) translateX(150px);
+}
+.box:nth-child(3){
+    background-image: url(../images/batman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center top;
+  transform: rotateX(-90deg) translateY(-150px)
+  
+}
+.box:nth-child(4){
+    background-image: url(../images/adam.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center bottom;
+  transform: rotateX(90deg) translateY(150px);
+}
+.box:nth-child(5){
+    background-image: url(../images/superman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center bottom;
+  transform: translateZ(-150px);
+
+}
+.box:nth-child(6){
+    background-image: url(../images/wonderwoman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+  transform-origin: center bottom;
+  transform: translateZ(150px);
+}
+
